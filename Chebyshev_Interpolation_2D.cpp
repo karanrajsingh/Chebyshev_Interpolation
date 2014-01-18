@@ -80,8 +80,6 @@ void kernel2D(double*& x1, double*& y1, unsigned n1, double*& x2, double*& y2, u
 //                                                                              //
 //      PARAMETERS:                                                             //
 //                                                                              //
-//      INPUTS:                                                                 //
-//                                                                              //
 //      x_Center        -       The 'x' coordinate of the center of cluster.    //
 //      y_Center        -       The 'y' coordinate of the center of cluster.    //
 //      x_Radius        -       Radius of the cluster along the X direction.    //
