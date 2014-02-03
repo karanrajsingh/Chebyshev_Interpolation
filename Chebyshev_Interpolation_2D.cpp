@@ -23,7 +23,7 @@
 //                      'x' and 'y' locations.                                  //
 //                                                                              //
 /********************************************************************************/
-void function2D(double*& x, double*& y, unsigned n, double*& f) {
+void function2D(double* x, double* y, unsigned n, double*& f) {
         f       =       new double[n];
         for (unsigned j=0; j<n; ++j) {
                 f[j]    =       exp(-x[j]*y[j]-2.0*y[j]);
@@ -48,7 +48,7 @@ void function2D(double*& x, double*& y, unsigned n, double*& f) {
 //                      the second cluster.                                     //
 //                                                                              //
 /********************************************************************************/
-void kernel2D(double*& x1, double*& y1, unsigned n1, double*& x2, double*& y2, unsigned n2, double*& K) {
+void kernel2D(double* x1, double* y1, unsigned n1, double* x2, double* y2, unsigned n2, double*& K) {
         double Rsquare;
         unsigned index;
         K       =       new double[n1*n2];
@@ -91,7 +91,7 @@ void kernel2D(double*& x1, double*& y1, unsigned n1, double*& x2, double*& y2, u
 //      y_Cheb_Node     -       Scaled 'y' locations of the 'rank*rank'         //
 //                              Chebyshev nodes in the square.                  //
 /********************************************************************************/
-void get_Scaled_Chebyshev_Nodes(double x_Center, double x_Radius, double y_Center, double y_Radius, unsigned rank, double*& Cheb_Node, double*& x_Cheb_Node, double*& y_Cheb_Node) {
+void get_Scaled_Chebyshev_Nodes(double x_Center, double x_Radius, double y_Center, double y_Radius, unsigned rank, double* Cheb_Node, double*& x_Cheb_Node, double*& y_Cheb_Node) {
 
         unsigned RANK   =       rank*rank;
 
@@ -124,7 +124,7 @@ void get_Scaled_Chebyshev_Nodes(double x_Center, double x_Radius, double y_Cente
 //      L2L             -       Interpolation or L2L operator, which transfers  //
 //                              information from parent to child.               //
 /********************************************************************************/
-void get_Chebyshev_L2L_Operator(double*& x, double*& y, unsigned n, double*& Cheb_Node, unsigned rank, double*& L2L) {
+void get_Chebyshev_L2L_Operator(double* x, double* y, unsigned n, double* Cheb_Node, unsigned rank, double*& L2L) {
 
         double* L2Lx;
         get_Chebyshev_L2L_Operator(x, n, Cheb_Node, rank, L2Lx);

@@ -24,7 +24,7 @@
 //                      cluster and 'j'th point in the second cluster.          //
 //                                                                              //
 /********************************************************************************/
-void kernel1D(double*& x1, unsigned n1, double*& x2, unsigned n2, double*& K);
+void kernel1D(double* x1, unsigned n1, double* x2, unsigned n2, double*& K);
 
 /********************************************************************************/
 //      FUNCTION:               Chebyshev_polynomials                           //
@@ -41,7 +41,7 @@ void kernel1D(double*& x1, unsigned n1, double*& x2, unsigned n2, double*& K);
 //                      evaluated at the 'i'th location.                        //
 //                                                                              //
 /********************************************************************************/
-void Chebyshev_polynomials(unsigned rank, double*& x, unsigned n, double*& T);
+void Chebyshev_polynomials(unsigned rank, double* x, unsigned n, double*& T);
 
 /********************************************************************************/
 //      FUNCTION:               get_standard_Chebyshev_nodes                    //
@@ -84,7 +84,7 @@ void get_standard_Chebyshev_polynomials_evaluated_at_Chebyshev_nodes(unsigned ra
 //      S                       -       Interpolation or L2L operator.          //
 //                                                                              //
 /********************************************************************************/
-void get_Chebyshev_L2L_Operator(double*& x, unsigned n, double*& x_Cheb_Nodes, unsigned rank, double*& L2L);
+void get_Chebyshev_L2L_Operator(double* x, unsigned n, double* x_Cheb_Nodes, unsigned rank, double*& L2L);
 
 
 /********************************************************************************/
@@ -106,6 +106,6 @@ void get_Chebyshev_L2L_Operator(double*& x, unsigned n, double*& x_Cheb_Nodes, u
 //      x_New                   -       New set of points.                      //
 //                                                                              //
 /********************************************************************************/
-void scale_Points(double center, double radius, double*& x, unsigned N, double center_New, double radius_New, double*& x_New);
+void scale_Points(double center, double radius, double* x, unsigned N, double center_New, double radius_New, double*& x_New);
 
 #endif /* defined(__CHEBYSHEV_INTERPOLATION_1D_HPP__) */
